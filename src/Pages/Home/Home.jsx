@@ -6,11 +6,11 @@ import FeaturedTestimonial from '../../Components/Home/FeaturedTestimonial'
 export default function Home() {
     return (
 
-        <div className='px-7'>
+        <div className=''>
             <Banner />
             <FeaturedTherapist />
             <div className='  '>
-                <FeaturedTestimonial />
+                {/* <FeaturedTestimonial /> */}
             </div>
         </div>
 

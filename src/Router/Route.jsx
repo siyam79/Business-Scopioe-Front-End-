@@ -4,6 +4,8 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home";
 import Register from "../Pages/Auth/Register";
 import Login from "../Pages/Auth/Login";
+import About from "../Pages/About/About";
+import Setting from "../Pages/Setting/Setting";
 
 
 const Route = createBrowserRouter([
@@ -15,6 +17,14 @@ const Route = createBrowserRouter([
             {
                 path : "/",
                 element : <Home />
+            },
+            {
+                path : "/about",
+                element : <About />
+            },
+            {
+                path : "/settings",
+                element : <Setting />
             },
             {
                 path :'/register',

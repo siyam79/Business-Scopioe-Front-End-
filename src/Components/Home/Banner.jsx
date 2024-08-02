@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Banner() {
   return (
-    <section className='pt-8'>
+    <section className=''>
       <div className=' h-[212px] bg-[#FFFFFF] rounded-lg px-7 flex  justify-between '>
         <div className=' max-w-[587px] '>
           <div className=' py-4 '>

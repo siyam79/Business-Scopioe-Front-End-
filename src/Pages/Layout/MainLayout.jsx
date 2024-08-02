@@ -28,7 +28,7 @@ export default function MainLayout() {
         <div className=' w-full  '>
           <Header toggleSidebar={toggleSidebar} />
           {isSidebarOpen && <div className="fixed inset-0 bg-black opacity-50 z-[9998]" onClick={closeSidebar}></div>}
-          <div className=' 2xl:w-[1190px] lg:w-[1000px] mx-auto h-screen px-7  2xl:mt-24 lg:mt-20 pt-8 bg-[#E7E7E7] z-50 '>
+          <div className=' 2xl:w-[1190px] lg:w-[1000px] mx-auto h-screen lg:px-7 px-1 2xl:mt-24 mt-[60px] lg:mt-20 lg:pt-8 pt-2 bg-[#E7E7E7] z-50 '>
             <Outlet></Outlet>
 
           </div>

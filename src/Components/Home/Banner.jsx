@@ -3,8 +3,8 @@ import React from 'react'
 export default function Banner() {
   return (
     <section className=''>
-      <div className=' h-[212px] bg-[#FFFFFF] rounded-lg px-7 flex  justify-between '>
-        <div className=' max-w-[587px] '>
+      <div className=' h-[212px] bg-[#FFFFFF] rounded-lg lg:px-7 flex  justify-between '>
+        <div className=' lg:max-w-[587px] w-full '>
           <div className=' py-4 '>
             <h1 className=' text-[#152A16] py-4 font-semibold text-[20px] line-height-[30px] leading-8 '> I am Looking For Massage Therapist Near.. </h1>
             <p className=' text-[15px] leading-6 font-medium'>

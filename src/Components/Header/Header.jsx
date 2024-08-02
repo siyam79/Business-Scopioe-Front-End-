@@ -3,6 +3,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { CgLogOut } from "react-icons/cg";
+import { Link } from 'react-router-dom';
 
 export default function Header({ toggleSidebar }) {
     return (
@@ -23,12 +24,12 @@ export default function Header({ toggleSidebar }) {
                         <div className='border border-[#E7E7E7] p-2 rounded-full'>
                             <IoNotificationsOutline size={24} />
                         </div>
-                        <div className='flex items-center gap-4'>
+                        <Link to={'/login'}><div className='flex items-center gap-4'>
                             <p className='text-[#F15E4A] text-[15px] font-medium'>Log Out</p>
                             <div className='bg-[#FFECEA] p-2 rounded-full transform rotate-180 '>
                                 <CgLogOut size={24} />
                             </div>
-                        </div>
+                        </div></Link>
                     </div>
                 </div>
                 <div className='lg:hidden flex items-center gap-4 justify-center my-4' onClick={toggleSidebar}>

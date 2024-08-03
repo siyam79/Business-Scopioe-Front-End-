@@ -26,8 +26,8 @@ This project involves converting a provided Figma design into a fully functional
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/siyam79/Business-Scopioe-Front-End-.git
+    cd Business-Scopioe
     ```
 
 2. **Install dependencies:**
@@ -35,8 +35,13 @@ This project involves converting a provided Figma design into a fully functional
     ```sh
     npm install
     ```
+3. **Run the application:**
 
-3. **Set up environment variables:**
+    ```sh
+    npm run dev
+    ```
+
+4. **Set up environment variables:**
 
     Create a `.env` file in the root directory and add your Firebase configuration this Demo :
 
@@ -52,20 +57,7 @@ For Firebase, create a Firebase project and update the configuration in `src/fir
 
 ## Usage
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/siyam79/Business-Scopioe-Front-End-.git
-   cd Business-Scopioe
-  ```
-
-
-2. **Run the application:**
-
-    ```sh
-    npm run dev
-    ```
-
-3. **Open your browser:**
+3. ### Open your browser:
 
     Navigate to `http://localhost:5173` to view the application.
 
@@ -92,14 +84,14 @@ For Firebase, create a Firebase project and update the configuration in `src/fir
 
 ## Dependencies
 
-- **React.js**
-- **react-router-dom**
-- **Firebase or Auth0**
-- **Tailwind CSS**
-- **React-hook-form**
-- **react-hot-toast**
-- **react-icons**
-- **swiper.js**
+- React.js
+- react-router-dom
+- Firebase or Auth0
+- Tailwind CSS
+- React-hook-form
+- react-hot-toast
+- react-icons
+- swiper.js
 
 ## Configuration
 
@@ -107,33 +99,33 @@ Ensure you have configured Firebase  in the `.env` file with the correct credent
 
 ## Documentation
 
-- **Figma Design Conversion:**
+- ### Figma Design Conversion:
   - The application is built to match the provided Figma design closely.
   
-- **Login Functionality:**
+- ### Login Functionality:
   - Utilizes Firebase/Auth0 for authentication.
   - Includes login page and protected routes.
 
-- **React Router Setup:**
+- ### React Router Setup:
   - Configured routes for navigation within the application.
 
-- **Dynamic Data Display:**
+- ### Dynamic Data Display:
   - Fetches and displays data with a search feature.
 
-- **Styling:**
+- ### Styling:
   - Tailwind CSS is used for component styling.
 
 ## Examples
 
-- **Login Page:**
+- ### Login Page:
   - Allows users to log in using Firebase/Auth0.
 
-- **Main Content Pages:**
+- ### Main Content Pages:
   - Displays dynamic data fetched from a static JSON or mock API.
 
 ## Troubleshooting
 
-- **Common Issues:**
+- ### Common Issues:
   - Ensure environment variables are set correctly in the `.env` file.
   - Check Firebase/Auth0 configuration for correct setup.
 

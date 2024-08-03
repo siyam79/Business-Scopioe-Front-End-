@@ -26,10 +26,10 @@ export default function PopularCities() {
   ];
 
   return (
-    <section className='2xl:w-1/2 lg:w-1/2 2xl:h-[429px] lg:h-[380px] mb-6 '>
+    <section className='2xl:w-1/2 lg:w-1/2 2xl:h-[429px] lg:h-[380px] '>
       <h4 className='text-lg lg:text-xl 2xl:text-2xl font-semibold pb-2 lg:px-0 px-2 '>PopularCities</h4>
       <div className='bg-[#FFFFFF] rounded-lg shadow-md  2xl:px-7 lg:px-3 px-1 '>
-        <div className='grid grid-cols-3 lg:pb-5'>
+        <div className='grid grid-cols-3 lg:pb-3'>
         
             {
               PopularCitiesName?.map((item, i) => (

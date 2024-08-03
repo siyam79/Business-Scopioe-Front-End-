@@ -59,22 +59,19 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
             <div className='text-center py-10 text-[40px] lg:block hidden text-[#4285F3]'>
                 <h1 className=''>LOGO</h1>
             </div>
-
-            {/*  user info */}
             <div className='lg:hidden  bg-[#156BCA] h-[302px] w-full  pt-[116px] pl-20 '>
                 <div className=' px-6 '>
                     {
                         user?.photoURL ? <img className='w-[74px] h-[74px] rounded-full ' src={user?.photoURL} alt="" /> : <img src="https://i.ibb.co/JkNR5W3/user5.png" alt="usaer" className='w-[74px] h-[74px] rounded-full' />
                     }
-
+                   
                 </div>
                 <h3 className=' text-[#FFFFFF] text-[24px] font-semibold '> {user?.displayName
-                    ? user?.displayName : "Jhone"} </h3>
+                ? user?.displayName : "Jhone" } </h3>
                 <p className=' text-[#1A2634] text-[12px] font-normal '> {user?.email
-                    ? user?.email : "user@gmail.com"} </p>
+                ? user?.email : "user@gmail.com" } </p>
 
             </div>
-
             <nav>
                 <ul className='list-none p-0'>
                     {navItems.map((item, index) => (

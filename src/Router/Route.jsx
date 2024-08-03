@@ -8,6 +8,7 @@ import About from "../Pages/About/About";
 import Setting from "../Pages/Setting/Setting";
 import NewListing from "../Pages/NewsListing/NewListing";
 import Search from "../Pages/Search/Search";
+import Products from "../Pages/Products/Products";
 
 
 const Route = createBrowserRouter([
@@ -27,6 +28,10 @@ const Route = createBrowserRouter([
             {
                 path : "/newListing",
                 element : <NewListing />
+            },
+            {
+                path : "/products",
+                element : <Products />
             },
             {
                 path : "/search",

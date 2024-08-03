@@ -3,6 +3,9 @@ import SearchhBar from './SearchBar'
 import { BannerImage, BannerImageBG } from './BannerImage'
 
 export default function Banner() {
+
+  
+
   return (
     <section className=''>
       <div className='lg:h-[212px] h-[428px] bg-[#FFFFFF] rounded-lg lg:px-7 lg:flex justify-between'>
@@ -10,7 +13,7 @@ export default function Banner() {
           <div className='lg:py-4'>
             <h1 className='text-[#152A16] py-4 text-[18px] truncate  font-medium lg:text-[20px] lg:leading-8'>I am Looking For Massage Therapist Near..</h1>
             <p className='text-[15px] leading-6 font-normal mb-6 lg:mb-0'>
-              In using this site, I agree to be bound by the <span className='underline text-[#156BCA]'>Terms of Service</span> <br className=' lg:block hidden '/> and <span className='underline text-[#156BCA]'>Privacy Policy</span>
+              In using this site, I agree to be bound by the <span className='underline text-[#156BCA]'>Terms of Service</span> <br className=' lg:block hidden ' /> and <span className='underline text-[#156BCA]'>Privacy Policy</span>
             </p>
           </div>
 

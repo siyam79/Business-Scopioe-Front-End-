@@ -76,14 +76,15 @@ export default function FeaturedTestimonial() {
                     >
                         {clients.map((client, index) => (
                             <SwiperSlide key={index} className="text-center lg:text-lg text-sm flex justify-center items-center">
-                                <div className="flex items-center justify-center lg:w-[420px] 2xl:w-full xl:w-full w-full h-[160px] border border-gray-300 overflow-hidden rounded-lg">
+                                <div className="flex items-center justify-center lg:w-[420px] 2xl:w-full xl:w-full w-full h-[150px] mt-2 border border-gray-300 overflow-hidden rounded-lg">
                                     <img
                                         src={client.image}
                                         alt={`Slide ${index + 1}`}
-                                        className="object-cover rounded-lg w-[130px] h-[130px] px-2"
-                                        style={{ width: '130px', height: '130px' }}
+                                        className="object-cover rounded-lg lg:w-[130px] w-[100px] 
+                                        h-[130px] lg:px-2 px-1"
+
                                     />
-                                    <div className='py-2 text-left px-2'>
+                                    <div className='py-2 text-left lg:px-2 px-1  '>
                                         <p className='flex items-center gap-1 font-normal text-xs sm:text-sm text-[#5C635A]'>
                                             <IoLocation /> {client.location}
                                         </p>

@@ -43,7 +43,7 @@ export default function Register() {
   const confirmPassword = watch("confirmPassword");
 
   return (
-    <div className="font-poppins relative min-h-screen ">
+    <div className="font-poppins relative min-h-screen pb-10">
       <div className="lg:flex items-center  h-full relative ">
 
 
@@ -65,7 +65,7 @@ export default function Register() {
           </div>
 
           {/* Form container */}
-          <div className="relative z-20 bg-white sm:shadow-lg  lg:shadow-none  lg:mt-0 mt-[220px] pb-4  lg:rounded-none rounded-tl-[40px] rounded-tr-[40px] lg:px-10 lg:py-4 lg:pt-10">
+          <div className="relative z-20 bg-white shadow-lg  lg:shadow-none  lg:mt-0 mt-[220px] pb-4  lg:rounded-none rounded-tl-[40px] rounded-tr-[40px] lg:px-10 lg:py-4 lg:pt-10">
 
             <div className="lg:hidden absolute inset-0 z-20 flex flex-col items-center justify-center text-white p-2 ">
               <h1 className="text-4xl font-bold">LOGO</h1>
@@ -213,7 +213,7 @@ export default function Register() {
         <div className="relative lg:w-1/2 mx-auto pt-4 lg:h-[802px]  hidden lg:block bg-gray-50 md:rounded-tr-xl md:rounded-br-xl lg:px-10">
           <img
             src={Registerbanner}
-            className="lg:h-[802px] max-h-[802px] rounded-2xl w-full object-cover mx-auto opacity-10 "  // Adjust opacity here
+            className="lg:h-[802px] max-h-[790px] rounded-2xl w-full object-cover mx-auto opacity-10 "  // Adjust opacity here
             alt="login-image"
           />
 

@@ -1,0 +1,103 @@
+[
+    {
+      "id": 1,
+      "name": "Digital Thermometer",
+      "category": "Temperature Measurement",
+      "manufacturer": "HealthTech",
+      "model": "HT-1000",
+      "price": 25.99,
+      "description": "A digital thermometer with a fast and accurate temperature reading.",
+      "availability": "In Stock"
+    },
+    {
+      "id": 2,
+      "name": "Blood Pressure Monitor",
+      "category": "Cardiovascular Monitoring",
+      "manufacturer": "MedMonitor",
+      "model": "MM-500",
+      "price": 45.50,
+      "description": "Automatic blood pressure monitor with an easy-to-read LCD display.",
+      "availability": "In Stock"
+    },
+    {
+      "id": 3,
+      "name": "Pulse Oximeter",
+      "category": "Oxygen Saturation Measurement",
+      "manufacturer": "OxySense",
+      "model": "OS-200",
+      "price": 30.00,
+      "description": "Portable pulse oximeter to measure blood oxygen levels and pulse rate.",
+      "availability": "Out of Stock"
+    },
+    {
+      "id": 4,
+      "name": "Glucose Meter",
+      "category": "Diabetes Management",
+      "manufacturer": "GlucoCare",
+      "model": "GC-150",
+      "price": 20.75,
+      "description": "A compact glucose meter for monitoring blood sugar levels.",
+      "availability": "In Stock"
+    },
+    {
+      "id": 5,
+      "name": "Stethoscope",
+      "category": "Auscultation",
+      "manufacturer": "MediSound",
+      "model": "MS-400",
+      "price": 55.00,
+      "description": "High-quality stethoscope for accurate auscultation of heart and lung sounds.",
+      "availability": "In Stock"
+    },
+    {
+      "id": 6,
+      "name": "ECG Machine",
+      "category": "Cardiac Monitoring",
+      "manufacturer": "CardioTech",
+      "model": "CT-800",
+      "price": 1200.00,
+      "description": "ECG machine for monitoring heart activity with advanced features.",
+      "availability": "In Stock"
+    },
+    {
+      "id": 7,
+      "name": "Nebulizer",
+      "category": "Respiratory Therapy",
+      "manufacturer": "RespiraCare",
+      "model": "RC-300",
+      "price": 85.00,
+      "description": "Nebulizer for delivering medication directly to the lungs.",
+      "availability": "In Stock"
+    },
+    {
+      "id": 8,
+      "name": "Oxygen Concentrator",
+      "category": "Respiratory Support",
+      "manufacturer": "OxyFlow",
+      "model": "OF-1000",
+      "price": 650.00,
+      "description": "Oxygen concentrator that provides supplemental oxygen for respiratory support.",
+      "availability": "In Stock"
+    },
+    {
+      "id": 9,
+      "name": "Thermometer",
+      "category": "Temperature Measurement",
+      "manufacturer": "HealthPlus",
+      "model": "HP-200",
+      "price": 15.00,
+      "description": "Basic thermometer for quick temperature checks.",
+      "availability": "In Stock"
+    },
+    {
+      "id": 10,
+      "name": "Defibrillator",
+      "category": "Emergency Care",
+      "manufacturer": "DefibTech",
+      "model": "DT-5000",
+      "price": 2500.00,
+      "description": "Automated external defibrillator (AED) for emergency cardiac care.",
+      "availability": "Out of Stock"
+    }
+  ]
+  

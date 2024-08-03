@@ -41,25 +41,28 @@ export default function Register() {
 
   return (
     <div className="font-poppins relative min-h-screen ">
-      <div className="lg:flex items-center lg:gap-4 h-full relative">
+      <div className="lg:flex items-center  h-full relative ">
 
 
         {/* Form section */}
-        <div className="lg:w-1/2 w-full pt-4 lg:pt-0 relative">
+        <div className="lg:w-1/2 w-full pt-4 lg:pt-0 relative  lg:h-[802px] ">
           {/* Background image for small devices */}
           <div className="lg:hidden absolute inset-0 z-0">
             <img src="https://i.ibb.co/MZzqXxX/banner1.jpg" className="w-full h-full object-cover" alt="background" />
           </div>
 
           {/* Logo and text over the image */}
-          <div className="lg:hidden absolute  left-12 top-10">
-            <p className="text-4xl font-bold text-[#4285F3]  text-center ">LOGO</p>
-            <p className="mt-4 text-lg text-center text-[#FFFFFF] ">Create Account</p>
-            <p className="mt-1 text-lg text-[#FFFFFF] ">Fill in Your Information</p>
+          <div className=" flex justify-center mt-10 lg:mt-0 ">
+            <div className="lg:hidden absolute  ">
+              <p className="text-4xl font-bold text-[#4285F3]  text-center ">LOGO</p>
+              <p className="mt-4 text-lg text-center text-[#FFFFFF] ">Create Account</p>
+              <p className="mt-1 text-lg text-[#FFFFFF] ">Fill in Your Information</p>
+            </div>
+
           </div>
 
           {/* Form container */}
-          <div className="relative z-20 bg-white sm:shadow-lg  mt-[220px] pb-4 lg:px-4 lg:rounded-2xl rounded-tl-[40px] rounded-tr-[40px]">
+          <div className="relative z-20 bg-white sm:shadow-lg  lg:shadow-none  lg:mt-0 mt-[220px] pb-4  lg:rounded-none rounded-tl-[40px] rounded-tr-[40px] lg:px-10 lg:py-4">
 
             <div className="lg:hidden absolute inset-0 z-20 flex flex-col items-center justify-center text-white p-2 ">
               <h1 className="text-4xl font-bold">LOGO</h1>
@@ -79,7 +82,7 @@ export default function Register() {
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="px-2">
-              <h3 className="text-[#1A2531] text-[28px] font-bold font-poppins text-center pt-8">
+              <h3 className="text-[#1A2531] lg:hidden text-[28px] font-bold font-poppins text-center pt-8">
                 Sign In
               </h3>
 
@@ -204,7 +207,7 @@ export default function Register() {
         </div>
 
         {/* Image section */}
-        <div className="lg:w-1/2 mx-auto lg:h-[802px] hidden lg:block bg-[#000842] md:rounded-tr-xl md:rounded-br-xl">
+        <div className="lg:w-1/2 mx-auto  pt-4 lg:h-[802px] hidden lg:block  bg-white md:rounded-tr-xl md:rounded-br-xl lg:px-10">
           <img
             src="https://readymadeui.com/signin-image.webp"
             className="lg:w-[70%] w-full h-full object-contain block mx-auto"

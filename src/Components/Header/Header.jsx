@@ -3,14 +3,13 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { CgLogOut } from "react-icons/cg";
-import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 
 export default function Header({ toggleSidebar }) {
 
-    const { user } = useAuth();
-    
+    const { user, logOut } = useAuth();
+
 
     return (
         <section className='
@@ -23,8 +22,13 @@ export default function Header({ toggleSidebar }) {
                     }
 
                     <div>
-                        <h4 className='flex items-center gap-8 text-[#152A16] text-[15px] font-medium '> {user?.displayName}  <span> <RiArrowDropDownLine /> </span> </h4>
-                        <p className=' text-[#5C635A] font-normal text-[14px] '>{user?.email} </p>
+                        <h4 className='flex items-center gap-8 text-[#152A16] text-[15px] font-medium '> {user?.displayName ? user?.displayName : "Jhone"
+                        }  <span> <RiArrowDropDownLine /> </span> </h4>
+                        <p className=' text-[#5C635A] font-normal text-[14px] '>
+                            {
+                                user?.email ? user?.email : "user@gmail.com"
+                            }
+                        </p>
                     </div>
                 </div>
                 <div className='lg:hidden'>
@@ -35,12 +39,13 @@ export default function Header({ toggleSidebar }) {
                         <div className='border border-[#E7E7E7] p-2 rounded-full'>
                             <IoNotificationsOutline size={24} />
                         </div>
-                        <Link to={'/login'}><div className='flex items-center gap-4'>
+
+                        <div onClick={logOut} className='flex items-center gap-4 cursor-pointer'>
                             <p className='text-[#F15E4A] text-[15px] font-medium'>Log Out</p>
                             <div className='bg-[#FFECEA] p-2 rounded-full transform rotate-180 '>
                                 <CgLogOut size={24} />
                             </div>
-                        </div></Link>
+                        </div>
                     </div>
                 </div>
                 <div className='lg:hidden flex items-center gap-4 justify-center my-4' onClick={toggleSidebar}>
@@ -52,6 +57,9 @@ export default function Header({ toggleSidebar }) {
                     </div>
                 </div>
             </div>
+
+            
+
         </section>
     )
 }

@@ -6,6 +6,9 @@ import useAuth from "../../Hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
+// Register banner image 
+import Registerbanner from "../../../src/assets/images/loginBanner.jpeg"
+
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -62,7 +65,7 @@ export default function Register() {
           </div>
 
           {/* Form container */}
-          <div className="relative z-20 bg-white sm:shadow-lg  lg:shadow-none  lg:mt-0 mt-[220px] pb-4  lg:rounded-none rounded-tl-[40px] rounded-tr-[40px] lg:px-10 lg:py-4">
+          <div className="relative z-20 bg-white sm:shadow-lg  lg:shadow-none  lg:mt-0 mt-[220px] pb-4  lg:rounded-none rounded-tl-[40px] rounded-tr-[40px] lg:px-10 lg:py-4 lg:pt-10">
 
             <div className="lg:hidden absolute inset-0 z-20 flex flex-col items-center justify-center text-white p-2 ">
               <h1 className="text-4xl font-bold">LOGO</h1>
@@ -207,12 +210,21 @@ export default function Register() {
         </div>
 
         {/* Image section */}
-        <div className="lg:w-1/2 mx-auto  pt-4 lg:h-[802px] hidden lg:block  bg-white md:rounded-tr-xl md:rounded-br-xl lg:px-10">
+        <div className="relative lg:w-1/2 mx-auto pt-4 lg:h-[802px]  hidden lg:block bg-gray-50 md:rounded-tr-xl md:rounded-br-xl lg:px-10">
           <img
-            src="https://readymadeui.com/signin-image.webp"
-            className="lg:w-[70%] w-full h-full object-contain block mx-auto"
+            src={Registerbanner}
+            className="lg:h-[802px] max-h-[802px] rounded-2xl w-full object-cover mx-auto opacity-10 "  // Adjust opacity here
             alt="login-image"
           />
+
+          {/* Text overlay */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center  text-white">
+            <div className=" bg-[#152A16] h-[143px]  w-[341px] flex flex-col items-center justify-center font-semibold rounded-xl  ">
+
+              <p className="mt-1 text-[22px]  text-[#156BCA]">Create Account</p>
+              <p className="mt-1 text-[22px] text-white ">Fill in Your Information</p>
+            </div>
+          </div>
         </div>
 
       </div>

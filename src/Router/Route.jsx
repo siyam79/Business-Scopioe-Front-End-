@@ -6,6 +6,8 @@ import Register from "../Pages/Auth/Register";
 import Login from "../Pages/Auth/Login";
 import About from "../Pages/About/About";
 import Setting from "../Pages/Setting/Setting";
+import NewListing from "../Pages/NewsListing/NewListing";
+import Search from "../Pages/Search/Search";
 
 
 const Route = createBrowserRouter([
@@ -21,6 +23,14 @@ const Route = createBrowserRouter([
             {
                 path : "/about",
                 element : <About />
+            },
+            {
+                path : "/newListing",
+                element : <NewListing />
+            },
+            {
+                path : "/search",
+                element : <Search />
             },
             {
                 path : "/settings",

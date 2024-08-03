@@ -53,23 +53,28 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
 
     return (
         <section className={`fixed top-0  
-        lg:left-8 2xl:w-[250px] lg:w-[220px] w-[220px] bg-[#FFFFFF] shadow-lg h-screen
+        lg:left-8 2xl:w-[250px] lg:w-[220px] w-[220px] bg-[#FFFFFF] shadow-lg h-auto min-h-screen
         
-        border-[#E7E7E7] overflow-y-auto z-[9999] right-0 ${isOpen ? 'block' : 'hidden'} lg:block`}>
+        border-[#E7E7E7] overflow-y-auto z-[9998] right-0 ${isOpen ? 'block' : 'hidden'} lg:block`}>
             <div className='text-center py-10 text-[40px] lg:block hidden text-[#4285F3]'>
                 <h1 className=''>LOGO</h1>
             </div>
+
+            {/*  user info */}
             <div className='lg:hidden  bg-[#156BCA] h-[302px] w-full  pt-[116px] pl-20 '>
                 <div className=' px-6 '>
                     {
                         user?.photoURL ? <img className='w-[74px] h-[74px] rounded-full ' src={user?.photoURL} alt="" /> : <img src="https://i.ibb.co/JkNR5W3/user5.png" alt="usaer" className='w-[74px] h-[74px] rounded-full' />
                     }
-                   
+
                 </div>
-                <h3 className=' text-[#FFFFFF] text-[24px] font-semibold '> {user?.displayName} </h3>
-                <p className=' text-[#1A2634] text-[12px] font-normal '> {user?.email} </p>
+                <h3 className=' text-[#FFFFFF] text-[24px] font-semibold '> {user?.displayName
+                    ? user?.displayName : "Jhone"} </h3>
+                <p className=' text-[#1A2634] text-[12px] font-normal '> {user?.email
+                    ? user?.email : "user@gmail.com"} </p>
 
             </div>
+
             <nav>
                 <ul className='list-none p-0'>
                     {navItems.map((item, index) => (

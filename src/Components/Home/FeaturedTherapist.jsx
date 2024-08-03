@@ -59,7 +59,7 @@ export default function FeaturedTherapist() {
 
     return (
         <section className='pt-8 pb-10'>
-            <h3 className='text-[18px] font-medium pb-2'>Featured Therapist</h3>
+            <h3 className='text-lg lg:text-xl 2xl:text-2xl font-semibold pb-2 lg:px-0 px-2'>Featured Therapist</h3>
             <div className='relative bg-[#FFFFFF] rounded-lg px-2 lg:px-7'>
                 <Swiper
                     slidesPerView={3} // Default for small devices

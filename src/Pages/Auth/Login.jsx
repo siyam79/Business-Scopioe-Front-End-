@@ -1,14 +1,18 @@
 import { useState } from "react";
 // react icons
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
-import { FcGoogle } from "react-icons/fc";
 import { CiMail } from "react-icons/ci";
-import { SiFacebook } from "react-icons/si";
+
+
+// login banner image 
+
+import loginbanner from "../../../src/assets/images/loginBanner.jpeg"
 
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 export default function Login() {
 
@@ -44,7 +48,7 @@ export default function Login() {
 
   return (
     <div>
-      <div className="font-poppins relative min-h-screen ">
+      <div className="font-poppins relative min-h-screen pb-10 ">
         <div className="lg:flex items-center  h-full relative ">
 
 
@@ -66,7 +70,7 @@ export default function Login() {
             </div>
 
             {/* Form container */}
-            <div className="relative z-20 bg-white sm:shadow-lg  lg:shadow-none  lg:mt-0 mt-[220px] pb-4  lg:rounded-none rounded-tl-[40px] rounded-tr-[40px] lg:px-10 lg:py-4">
+            <div className="relative z-20 bg-white shadow-lg  lg:shadow-none  lg:mt-0 mt-[220px] pb-4  lg:rounded-none rounded-tl-[40px] rounded-tr-[40px] lg:px-10 lg:pt-24 lg:py-6 lg:h-[802px] ">
 
 
               {/* lg elements  */}
@@ -80,15 +84,7 @@ export default function Login() {
 
               {/* social login buttton */}
               <div className='flex items-center 2xl:gap-4 lg:gap-2 gap-2 px-1 '>
-                <button type="button" className="w-full  flex items-center justify-center 2xl:gap-2 lg:gap-2 gap-1 py-3 2xl:px-6 lg:px-2 text-[16px]  font-normal tracking-wide text-gray-800 border border-gray-300 rounded-md bg-[#E4E4E4]  ">
-                  <FcGoogle size={20} />
-                  google
-                </button>
-                <button type="button" className="w-full flex items-center justify-center 2xl:gap-2 lg:gap-2 py-3 gap-1 2xl:px-6 lg:px-2 text-[16px]  font-normal tracking-wide text-[#ffffff] border border-gray-300 rounded-md bg-[#298FFF] ">
-                  <SiFacebook size={20} />
-                  facebook
-                </button>
-
+                <SocialLogin />
               </div>
 
               {/* divider */}
@@ -175,13 +171,23 @@ export default function Login() {
           </div>
 
           {/* Image section */}
-          <div className="lg:w-1/2 mx-auto  pt-4 lg:h-[802px] hidden lg:block  bg-white md:rounded-tr-xl md:rounded-br-xl lg:px-10">
+          <div className="relative lg:w-1/2 mx-auto pt-4 lg:h-[802px]  hidden lg:block bg-white md:rounded-tr-xl md:rounded-br-xl lg:px-10  ">
             <img
-              src="https://readymadeui.com/signin-image.webp"
-              className="lg:w-[70%] w-full h-full object-contain block mx-auto"
+              src={loginbanner}
+              className="lg:h-[802px] max-h-[750px]  rounded-2xl w-full object-cover mx-auto opacity-10 "  // Adjust opacity here
               alt="login-image"
             />
+
+            {/* Text overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center  text-white">
+              <div className=" bg-[#152A16] h-[143px]  w-[341px] flex flex-col items-center justify-center font-semibold rounded-xl  ">
+
+                <p className="mt-1 text-[22px]  "><span className="text-[#156BCA]">Sign In</span> to view all </p>
+                <p className="mt-1 text-[22px] text-white ">the massage therapists</p>
+              </div>
+            </div>
           </div>
+
 
         </div>
       </div>

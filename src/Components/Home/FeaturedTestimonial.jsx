@@ -80,18 +80,18 @@ export default function FeaturedTestimonial() {
                                     <img
                                         src={client.image}
                                         alt={`Slide ${index + 1}`}
-                                        className="object-cover rounded-lg lg:w-[130px] w-[100px] 
+                                        className="object-cover rounded-lg lg:max-w-[130px] max-w-[120px] 
                                         h-[130px] lg:px-2 px-1"
 
                                     />
                                     <div className='py-2 text-left lg:px-2 px-1  '>
-                                        <p className='flex items-center gap-1 font-normal text-xs sm:text-sm text-[#5C635A]'>
-                                            <IoLocation /> {client.location}
+                                        <p className='flex items-center gap-1 font-normal text-[14px] sm:text-sm text-[#5C635A]'>
+                                            <IoLocation size={18}/> {client.location}
                                         </p>
-                                        <h1 className="font-bold text-xs sm:text-sm lg:text-xl py-1">
+                                        <h1 className="font-bold text-[16px]  lg:text-xl py-1">
                                             {client.title} <span className='text-[#156BCA] italic'>by Cort</span>
                                         </h1>
-                                        <p className="text-xs sm:text-sm text-[#5C635A]">
+                                        <p className="text-[12px] sm:text-sm text-[#5C635A]">
                                             {client.description} <span className='text-[#156BCA] font-normal text-xs'>...Read More</span>
                                         </p>
                                     </div>

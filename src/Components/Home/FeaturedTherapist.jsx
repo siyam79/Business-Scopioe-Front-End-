@@ -1,13 +1,15 @@
 import React from 'react';
+
+import { IoLocation } from "react-icons/io5";
+import { FaCar } from "react-icons/fa";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FaAngleRight, FaAngleLeft } from 'react-icons/fa';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// Import required modules
+// import required modules
 import { Navigation } from 'swiper/modules';
 
 export default function FeaturedTherapist() {
@@ -23,94 +25,77 @@ export default function FeaturedTherapist() {
             "name": "Alexander Cort",
             "location": "123 Elm Street, New York",
             "productionTypes": "Mobile & In-Studio",
-            "image": "https://i.ibb.co/5FFTRHc/user2.png"
-        },
-        {
-            "name": "Alexander Cort",
-            "location": "123 Elm Street, New York",
-            "productionTypes": "Mobile & In-Studio",
-            "image": "https://i.ibb.co/Ry5cctz/user3.png"
-        },
-        {
-            "name": "Alexander Cort",
-            "location": "123 Elm Street, New York",
-            "productionTypes": "Mobile & In-Studio",
-            "image": "https://i.ibb.co/rQyw0dS/user4.png"
-        },
-        {
-            "name": "Alexander Cort",
-            "location": "123 Elm Street, New York",
-            "productionTypes": "Mobile & In-Studio",
-            "image": "https://i.ibb.co/rQyw0dS/user4.png"
-        },
-        {
-            "name": "Alexander Cort",
-            "location": "123 Elm Street, New York",
-            "productionTypes": "Mobile & In-Studio",
-            "image": "https://i.ibb.co/rQyw0dS/user4.png"
+            "image": "https://i.ibb.co/27fkH7g/user1.png"
         },
         {
             "name": "Alexander Cort",
             "location": "123 Elm Street, New York",
             "productionTypes": "Mobile & In-Studio",
             "image": "https://i.ibb.co/27fkH7g/user1.png"
-        }, // Duplicate entry for testing scroll
+        },
+        {
+            "name": "Alexander Cort",
+            "location": "123 Elm Street, New York",
+            "productionTypes": "Mobile & In-Studio",
+            "image": "https://i.ibb.co/27fkH7g/user1.png"
+        },
+        {
+            "name": "Alexander Cort",
+            "location": "123 Elm Street, New York",
+            "productionTypes": "Mobile & In-Studio",
+            "image": "https://i.ibb.co/27fkH7g/user1.png"
+        },
+        {
+            "name": "Alexander Cort",
+            "location": "123 Elm Street, New York",
+            "productionTypes": "Mobile & In-Studio",
+            "image": "https://i.ibb.co/27fkH7g/user1.png"
+        },
+        {
+            "name": "Alexander Cort",
+            "location": "123 Elm Street, New York",
+            "productionTypes": "Mobile & In-Studio",
+            "image": "https://i.ibb.co/27fkH7g/user1.png"
+        }
     ];
 
     return (
         <section className='pt-8 pb-10'>
-            <h3 className='text-lg lg:text-xl 2xl:text-2xl font-semibold pb-2 lg:px-0 px-2'>Featured Therapist</h3>
-            <div className='relative bg-[#FFFFFF] rounded-lg px-2 lg:px-7'>
+            <h3 className='text-[18px] font-medium pb-2'>Featured Therapist</h3>
+            <div className='relative bg-[#FFFFFF] rounded-lg px-2 lg:px-7 h-[363px]'>
                 <Swiper
-                    slidesPerView={3} // Default for small devices
-                    spaceBetween={10}
-                    navigation={{
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    }}
+                    navigation={true}
+                    modules={[Navigation]}
                     breakpoints={{
-                        // when window width is >= 640px
-                        640: {
-                            slidesPerView: 3,
+                        0: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
                         },
-                        // when window width is >= 1024px
                         1024: {
                             slidesPerView: 4,
+                            spaceBetween: -35,
                         },
-                        // when window width is >= 1536px (2xl)
-                        1536: {
-                            slidesPerView: 4,
-                        }
                     }}
-                    modules={[Navigation]}
-                    className="h-[363px]"
+                    className="mySwiper"
                 >
                     {userInformation.map((user, index) => (
-                        <SwiperSlide key={index} className="flex flex-col items-center mx-2 lg:mx-4 "> {/* Adjusted margin for small devices */}
-                            <div className='h-[303px]  2xl:max-w-[214px] lg:w-[214px] w-[178.69px] border-[#E7E7E7] shadow-lg flex flex-col items-center p-2 lg:p-1 my-6'> {/* Adjusted padding */}
-                                <img src={user.image} alt="user" className="h-[146px] w-full max-w-[194px] object-cover mb-2" />
-                                <div className='text-center'>
-                                    <h4 className="text-sm lg:text-xl font-semibold">{user.name}</h4>
-                                    <p className="text-xs lg:text-sm text-gray-600">{user.location}</p>
-                                    <p className="text-xs lg:text-sm text-gray-600">{user.productionTypes}</p>
+                        <SwiperSlide key={index}>
+                            <div className='lg:h-[303px] w-full h-full lg:w-[190px] border-gray-800 my-6 mx-12 shadow-md overflow-hidden rounded-bl-xl rounded-br-xl rounded-md'>
+                                <div className='lg:max-w-[190px] w-full p-2'>
+                                    <img className='w-full h-[100px] object-cover rounded-lg' src={user.image} alt={user.name} />
+                                </div>
+                                <div className='text-left ml-2 text-[12px]'>
+                                    <h3 className="font-medium text-sm">{user?.name}</h3>
+                                    <p className="flex items-center gap-2"><IoLocation /> {user?.location}</p>
+                                    <p className="flex items-center gap-2"><FaCar /> {user?.productionTypes}</p>
+                                </div>
+                                <div className='mt-7 bg-[#156BCA] rounded-bl-xl rounded-br-xl'>
+                                    <button className="text-[#ffffff] cursor-pointer text-[14px] font-medium py-4">See Details</button>
                                 </div>
                             </div>
-
-                            
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                {/* Navigation buttons */}
-                <div className="absolute top-1/2 transform -translate-y-1/2 left-0 z-10 hidden lg:flex">
-                    <button className="swiper-button-prev bg-[#156BCA] p-2 rounded-full shadow-md flex items-center justify-center w-10 h-10 text-white">
-                        <FaAngleLeft />
-                    </button>
-                </div>
-                <div className="absolute top-1/2 transform -translate-y-1/2 right-0 z-10 hidden lg:flex">
-                    <button className="swiper-button-next bg-[#156BCA] p-2 rounded-full shadow-md flex items-center justify-center w-10 h-10 text-white">
-                        <FaAngleRight />
-                    </button>
-                </div>
             </div>
         </section>
     );

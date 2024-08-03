@@ -9,6 +9,7 @@ import Setting from "../Pages/Setting/Setting";
 import NewListing from "../Pages/NewsListing/NewListing";
 import Search from "../Pages/Search/Search";
 import Products from "../Pages/Products/Products";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 
 const Route = createBrowserRouter([
@@ -19,7 +20,7 @@ const Route = createBrowserRouter([
         children : [
             {
                 path : "/",
-                element : <Home />
+                element : <PrivateRoute > <Home /> </PrivateRoute>
             },
             {
                 path : "/about",
@@ -31,7 +32,7 @@ const Route = createBrowserRouter([
             },
             {
                 path : "/products",
-                element : <Products />
+                element : <PrivateRoute> <Products /> </PrivateRoute> 
             },
             {
                 path : "/search",

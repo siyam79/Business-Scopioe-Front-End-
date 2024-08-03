@@ -4,8 +4,12 @@ import { LuLayoutDashboard } from "react-icons/lu";
 import { FaUserFriends, FaRegHeart, FaRegFile } from "react-icons/fa";
 import { IoSearchOutline, IoSettingsOutline } from "react-icons/io5";
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import useAuth from '../../Hooks/useAuth';
 
 export default function Sidebar({ isOpen, toggleSidebar }) {
+
+    const { user } = useAuth();
+
     const navItems = [
         {
             path: '/',
@@ -54,10 +58,13 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
             </div>
             <div className='lg:hidden  bg-[#156BCA] h-[302px] w-full  pt-[116px] pl-20 '>
                 <div className=' px-6 '>
-                    <img src="https://i.ibb.co/JkNR5W3/user5.png" alt="" className=' w-[74px] h-[74px] rounded-full  ' />
+                    {
+                        user?.photoURL ? <img className='w-[74px] h-[74px] rounded-full ' src={user?.photoURL} alt="" /> : <img src="https://i.ibb.co/JkNR5W3/user5.png" alt="usaer" className='w-[74px] h-[74px] rounded-full' />
+                    }
+                   
                 </div>
-                <h3 className=' text-[#FFFFFF] text-[24px] font-semibold '>sagar soni</h3>
-                <p className=' text-[#1A2634] text-[12px] font-normal '> sagar@gmail.com</p>
+                <h3 className=' text-[#FFFFFF] text-[24px] font-semibold '> {user?.displayName} </h3>
+                <p className=' text-[#1A2634] text-[12px] font-normal '> {user?.email} </p>
 
             </div>
             <nav>

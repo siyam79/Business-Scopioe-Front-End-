@@ -66,9 +66,9 @@ export default function FeaturedTestimonial() {
 
     return (
 
-        <section className='  '>
+        <section className='w-1/2 h-[429px] border mb-6 '>
             <h2 className='pb-2'>FeaturedTestimonial </h2>
-            <div className='h-[212px] w-[550px] bg-[#FFFFFF] rounded-lg px-7 pb-20 '>
+            <div className='h-[212px]   bg-[#FFFFFF] rounded-lg px-7 pb-20 '>
 
                 <div className="lg:w-[500px] w-full h-[330px] lg:mt-0 md:mt-0 mt-4 flex items-center  justify-center">
                     <Swiper

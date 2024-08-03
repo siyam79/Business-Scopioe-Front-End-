@@ -4,16 +4,25 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { CgLogOut } from "react-icons/cg";
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+
 
 export default function Header({ toggleSidebar }) {
+
+    const { user } = useAuth();
+    
+
     return (
         <section className='2xl:max-w-[1190px] 2xl:w-[1190px] lg:max-w-[1000px] lg:w-[1000px] lg:ml-14 2xl:ml-0 w-full mx-auto fixed top-0 z-[999] bg-[#FFFFFF] shadow-md border-[#E7E7E7] lg:h-[88px] 2xl:h-[96px] h-[60px]'>
             <div className='flex items-center justify-between lg:px-7 px-3 lg:my-6'>
                 <div className='hidden lg:flex items-center gap-3 '>
-                    <img src="https://i.ibb.co/JkNR5W3/user5.png" alt="usaer" className='w-10 h-10 rounded-full ' />
+                    {
+                        user?.photoURL ? <img className='w-10 h-10 rounded-full ' src={user?.photoURL} alt="" /> : <img src="https://i.ibb.co/JkNR5W3/user5.png" alt="usaer" className='w-10 h-10 rounded-full ' />
+                    }
+
                     <div>
-                        <h4 className='flex items-center gap-8 text-[#152A16] text-[15px] font-medium '>sagar soni  <span> <RiArrowDropDownLine /> </span> </h4>
-                        <p className=' text-[#5C635A] font-normal text-[14px] '>sagar@gmail.com</p>
+                        <h4 className='flex items-center gap-8 text-[#152A16] text-[15px] font-medium '> {user?.displayName}  <span> <RiArrowDropDownLine /> </span> </h4>
+                        <p className=' text-[#5C635A] font-normal text-[14px] '>{user?.email} </p>
                     </div>
                 </div>
                 <div className='lg:hidden'>

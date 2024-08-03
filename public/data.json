@@ -7,7 +7,8 @@
       "model": "HT-1000",
       "price": 25.99,
       "description": "A digital thermometer with a fast and accurate temperature reading.",
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "image": "https://i.ibb.co/vBqqbR9/images.jpg"
     },
     {
       "id": 2,
@@ -17,7 +18,8 @@
       "model": "MM-500",
       "price": 45.50,
       "description": "Automatic blood pressure monitor with an easy-to-read LCD display.",
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "image": "https://i.ibb.co/6gzYxQS/user9.jpg"
     },
     {
       "id": 3,
@@ -27,7 +29,8 @@
       "model": "OS-200",
       "price": 30.00,
       "description": "Portable pulse oximeter to measure blood oxygen levels and pulse rate.",
-      "availability": "Out of Stock"
+      "availability": "Out of Stock",
+      "image": "https://i.ibb.co/vBqqbR9/images.jpg"
     },
     {
       "id": 4,
@@ -37,7 +40,8 @@
       "model": "GC-150",
       "price": 20.75,
       "description": "A compact glucose meter for monitoring blood sugar levels.",
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "image": "https://i.ibb.co/6gzYxQS/user9.jpg"
     },
     {
       "id": 5,
@@ -47,7 +51,8 @@
       "model": "MS-400",
       "price": 55.00,
       "description": "High-quality stethoscope for accurate auscultation of heart and lung sounds.",
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "image": "https://i.ibb.co/vBqqbR9/images.jpg"
     },
     {
       "id": 6,
@@ -57,7 +62,8 @@
       "model": "CT-800",
       "price": 1200.00,
       "description": "ECG machine for monitoring heart activity with advanced features.",
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "image": "https://i.ibb.co/6gzYxQS/user9.jpg"
     },
     {
       "id": 7,
@@ -67,7 +73,8 @@
       "model": "RC-300",
       "price": 85.00,
       "description": "Nebulizer for delivering medication directly to the lungs.",
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "image": "https://i.ibb.co/vBqqbR9/images.jpg"
     },
     {
       "id": 8,
@@ -77,7 +84,8 @@
       "model": "OF-1000",
       "price": 650.00,
       "description": "Oxygen concentrator that provides supplemental oxygen for respiratory support.",
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "image": "https://i.ibb.co/6gzYxQS/user9.jpg"
     },
     {
       "id": 9,
@@ -87,7 +95,8 @@
       "model": "HP-200",
       "price": 15.00,
       "description": "Basic thermometer for quick temperature checks.",
-      "availability": "In Stock"
+      "availability": "In Stock",
+      "image": "https://i.ibb.co/vBqqbR9/images.jpg"
     },
     {
       "id": 10,
@@ -97,7 +106,8 @@
       "model": "DT-5000",
       "price": 2500.00,
       "description": "Automated external defibrillator (AED) for emergency cardiac care.",
-      "availability": "Out of Stock"
+      "availability": "Out of Stock",
+      "image": "https://i.ibb.co/6gzYxQS/user9.jpg"
     }
   ]
   

@@ -174,7 +174,7 @@ export default function Login() {
           <div className="relative lg:w-1/2 mx-auto pt-4 lg:h-[802px]  hidden lg:block bg-white md:rounded-tr-xl md:rounded-br-xl lg:px-10  ">
             <img
               src={loginbanner}
-              className="lg:h-[802px] max-h-[750px]  rounded-2xl w-full object-cover mx-auto opacity-10 "  // Adjust opacity here
+              className="lg:h-[802px] max-h-[750px]  rounded-2xl w-full object-cover mx-auto  inset-0 bg-orange-700 opacity-10 " 
               alt="login-image"
             />
 
@@ -188,6 +188,7 @@ export default function Login() {
             </div>
           </div>
 
+       
 
         </div>
       </div>

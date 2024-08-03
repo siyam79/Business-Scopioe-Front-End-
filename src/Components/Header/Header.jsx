@@ -13,7 +13,9 @@ export default function Header({ toggleSidebar }) {
     
 
     return (
-        <section className='2xl:max-w-[1190px] 2xl:w-[1190px] lg:max-w-[1000px] lg:w-[1000px] lg:ml-14 2xl:ml-0 w-full mx-auto fixed top-0 z-[999] bg-[#FFFFFF] shadow-md border-[#E7E7E7] lg:h-[88px] 2xl:h-[96px] h-[60px]'>
+        <section className='
+        2xl:max-w-[1190px] 2xl:w-[1190px] lg:max-w-[1000px] lg:w-[1000px] lg:ml-14 2xl:ml-0 w-full
+         mx-auto fixed top-0 z-[999] bg-[#FFFFFF] shadow-md border-[#E7E7E7] lg:h-[88px] 2xl:h-[96px] h-[60px]'>
             <div className='flex items-center justify-between lg:px-7 px-3 lg:my-6'>
                 <div className='hidden lg:flex items-center gap-3 '>
                     {

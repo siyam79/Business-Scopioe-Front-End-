@@ -52,7 +52,10 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
     ];
 
     return (
-        <section className={`fixed top-0  lg:left-8 2xl:w-[250px] lg:w-[220px] w-[220px] bg-[#FFFFFF] shadow-lg h-screen border-[#E7E7E7] overflow-y-auto z-[9999] right-0 ${isOpen ? 'block' : 'hidden'} lg:block`}>
+        <section className={`fixed top-0  
+        lg:left-8 2xl:w-[250px] lg:w-[220px] w-[220px] bg-[#FFFFFF] shadow-lg h-screen
+        
+        border-[#E7E7E7] overflow-y-auto z-[9999] right-0 ${isOpen ? 'block' : 'hidden'} lg:block`}>
             <div className='text-center py-10 text-[40px] lg:block hidden text-[#4285F3]'>
                 <h1 className=''>LOGO</h1>
             </div>

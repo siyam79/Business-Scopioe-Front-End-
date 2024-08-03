@@ -1,104 +1,103 @@
-
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
+// react icon
+import { IoLocation } from "react-icons/io5";
+
+// ?react swiper SwiperSlide
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
-
-// Import required modules
-import { Grid, } from 'swiper/modules';
+import { Grid, Pagination } from 'swiper/modules';
 
 export default function FeaturedTestimonial() {
 
-    const products = [
+    // fack dumy data 
+    const clients = [
         {
-            title: "Laptop Pro",
-            brand: "PCMaster",
-            category: "Electronics",
-            description: "High-performance laptop for professional use.",
-            image: "https://img.freepik.com/free-vector/abstract-business-cover_1201-951.jpg?w=740&t=st=1720074881~exp=1720075481~hmac=710bdb93052305d845358e71b677be939098ddcd347793d30cc29b0cf416d9a8",
-            price: 1299.99
+            title: "Healing Bodywork ",
+            location: "123 Elm Street, New York",
+            description: "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of",
+            image: "https://i.ibb.co/KWgsR4Y/user6.png",
+
         },
         {
-            title: "Coffee Maker Deluxe",
-            brand: "HomeTech",
-            category: "Home Appliances",
-            description: "Automatic coffee maker with multiple brewing options.",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfmTUhJmX734tkBuWGtFVTrMN99Z1k5sRc3Q&s",
-            price: 89.99
-        },
-        {
-            title: "Designer Watch",
-            brand: "FashionTime",
-            category: "Fashion",
-            description: "Elegant watch with a stylish design.",
-            image: "https://media.istockphoto.com/id/1290063471/photo/blue-book-stack.jpg?s=612x612&w=0&k=20&c=eWbuMgL99ve093Duiv7olGOhBAfUzq7tOBN73ld0a7M=",
-            price: 299.99
-        },
-        {
-            title: "Laptop Pro",
-            brand: "PCMaster",
-            category: "Electronics",
-            description: "High-performance laptop for professional use.",
-            image: "https://img.freepik.com/free-vector/abstract-business-cover_1201-951.jpg?w=740&t=st=1720074881~exp=1720075481~hmac=710bdb93052305d845358e71b677be939098ddcd347793d30cc29b0cf416d9a8",
-            price: 1299.99
-        },
-        {
-            title: "Coffee Maker Deluxe",
-            brand: "HomeTech",
-            category: "Home Appliances",
-            description: "Automatic coffee maker with multiple brewing options.",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfmTUhJmX734tkBuWGtFVTrMN99Z1k5sRc3Q&s",
-            price: 89.99
+            title: "Healing Bodywork ",
+
+            location: "123 Elm Street, New York",
+
+            description: "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of",
+            image: "https://i.ibb.co/hBqGT6X/user7.png",
+
         },
         {
             title: "Designer Watch",
-            brand: "FashionTime",
-            category: "Fashion",
-            description: "Elegant watch with a stylish design.",
-            image: "https://media.istockphoto.com/id/1290063471/photo/blue-book-stack.jpg?s=612x612&w=0&k=20&c=eWbuMgL99ve093Duiv7olGOhBAfUzq7tOBN73ld0a7M=",
-            price: 299.99
+            location: "123 Elm Street, New York",
+            description: "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of",
+            image: "https://i.ibb.co/hBqGT6X/user7.png",
+
+        },
+        {
+            title: "Healing Bodywork ",
+            location: "123 Elm Street, New York",
+            description: "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of",
+            image: "https://i.ibb.co/KWgsR4Y/user6.png",
+
+        },
+        {
+            title: "Healing Bodywork ",
+            location: "123 Elm Street, New York",
+            description: "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of",
+            image: "https://i.ibb.co/KWgsR4Y/user6.png",
+
+        },
+        {
+            title: "Healing Bodywork ",
+            location: "123 Elm Street, New York",
+            description: "Cort’s healing bodywork massage was absolutely transformative. Their intuitive touch and deep understanding of",
+            image: "https://i.ibb.co/hBqGT6X/user7.png",
+
         }
     ];
 
 
     return (
-
-        <section className='w-1/2 h-[429px] border mb-6 '>
-            <h2 className='pb-2'>FeaturedTestimonial </h2>
-            <div className='h-[212px]   bg-[#FFFFFF] rounded-lg px-7 pb-20 '>
-
-                <div className="lg:w-[500px] w-full h-[330px] lg:mt-0 md:mt-0 mt-4 flex items-center  justify-center">
+        <section className='lg:w-1/2 2xl:w-1/2 2xl:h-[429px] lg:h-[380px] mb-6'>
+            <h2 className='text-lg lg:text-xl 2xl:text-2xl font-semibold pb-2 lg:px-0 px-2 '>Featured Testimonial</h2>
+            <div className='bg-[#FFFFFF] rounded-lg shadow-md 2xl:px-7 lg:px-4 px-2'>
+                <div className="lg:w-full w-full 2xl:h-[400px] lg:h-[390px] h-[370px] lg:pt-4 flex items-center justify-center relative">
                     <Swiper
                         slidesPerView={1}
-                        grid={{
-                            rows: 2,
-                        }}
-                        spaceBetween={30}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        modules={[Grid]}
+                        grid={{ rows: 2 }}
+                        spaceBetween={0}
+                        pagination={{ clickable: true }}
+                        modules={[Grid, Pagination]}
                         className="w-full h-full"
                     >
-                        {products.map((product, index) => (
-                            <SwiperSlide key={index} className="text-center text-lg lg:px-4 px-1 flex justify-center items-center">
-                                <div className="flex items-center justify-center lg:w-[490px] w-full h-[150px] border border-gray-300 gap-1">
-                                    <img src={product.image} alt={`Slide ${index + 1}`} className="object-cover 
-                            lg:w-[100px] w-[80px]  lg:h-[160px] h-[80px] rounded" />
-                                    <div className='py-2'>
-                                        <h1 className="font-bold lg:text-xl text-sm ">{product.title}</h1>
-                                        <p className="text-sm text-gray-500">{product.description}</p>
-                                        <p className="lg:text-lg text-sm  text-green-500">Price ${product.price.toFixed(2)}</p>
+                        {clients.map((client, index) => (
+                            <SwiperSlide key={index} className="text-center lg:text-lg text-sm flex justify-center items-center">
+                                <div className="flex items-center justify-center lg:w-[420px] 2xl:w-[490px] w-full h-[160px] border border-gray-300 overflow-hidden rounded-lg">
+                                    <img src={client.image} alt={`Slide ${index + 1}`} className="object-cover rounded-lg lg:w-[130px] 2xl:w-[130px] 2xl:h-[140px] w-[100px] h-[100px] px-2" />
+                                    <div className='py-2 text-left px-2'>
+                                        <p className='flex items-center gap-1 font-normal text-xs sm:text-sm text-[#5C635A]'>
+                                            <IoLocation /> {client.location}
+                                        </p>
+                                        <h1 className="font-bold text-xs sm:text-sm lg:text-xl py-1">
+                                            {client.title} <span className='text-[#156BCA] italic'>by Cort</span>
+                                        </h1>
+                                        <p className="text-xs sm:text-sm text-[#5C635A]">
+                                            {client.description} <span className='text-[#156BCA] font-normal text-xs'>...Read More</span>
+                                        </p>
                                     </div>
                                 </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                    <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-4">
+                        <div className="swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }

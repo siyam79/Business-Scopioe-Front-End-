@@ -13,7 +13,7 @@ export default function Register() {
     setShowPassword(!showPassword);
   };
 
-  const { createUser ,handleUpdateProfile } = useAuth();
+  const { createUser, handleUpdateProfile } = useAuth();
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const navigate = useNavigate();
 
@@ -21,43 +21,68 @@ export default function Register() {
     const email = data.email;
     const password = data.password;
     const name = data.userName;
-    console.log(data);
 
     createUser(email, password)
       .then(res => {
-        console.log(res);
         handleUpdateProfile(name)
           .then(() => {
-            toast.success('User created successfully',)
-            navigate('/')
-          })
-
+            toast.success('User created successfully');
+            navigate('/');
+          });
       })
       .catch(error => {
         console.error(error);
-        toast.error('please cheack your email or password ')
-      })
+        toast.error('Please check your email or password');
+      });
   };
 
   const password = watch("password");
   const confirmPassword = watch("confirmPassword");
 
   return (
-    <div>
-      <div className="font-[sans-serif]">
-        <div className="flex items-center gap-4 h-full">
-          <div className="lg:w-1/2 mx-auto lg:h-[802px] bg-[#000842] md:rounded-tr-xl md:rounded-br-xl p-8">
-            <img src="https://readymadeui.com/signin-image.webp" className="lg:w-[70%] w-full h-full object-contain block mx-auto" alt="login-image" />
+    <div className="font-poppins relative min-h-screen ">
+      <div className="lg:flex items-center lg:gap-4 h-full relative">
+
+
+        {/* Form section */}
+        <div className="lg:w-1/2 w-full pt-4 lg:pt-0 relative">
+          {/* Background image for small devices */}
+          <div className="lg:hidden absolute inset-0 z-0">
+            <img src="https://i.ibb.co/MZzqXxX/banner1.jpg" className="w-full h-full object-cover" alt="background" />
           </div>
 
-          <div className="lg:w-1/2 p-6">
-            <div className="mb-8">
-              <h3 className="text-[#4285F3] text-[40px] font-normal">LOGO</h3>
-              <h4 className="text-[#152A16] text-[30px] font-semibold py-3">Sign In To Your Account</h4>
-              <p className="text-[#5C635A]">Welcome Back! By clicking the sign up button, you're agreeing to Zenitood Terms and Service and acknowledging the <span className="text-[#156BCA] font-semibold underline ml-1 whitespace-nowrap">Privacy and Policy</span></p>
+          {/* Logo and text over the image */}
+          <div className="lg:hidden absolute  left-12 top-10">
+            <p className="text-4xl font-bold text-[#4285F3]  text-center ">LOGO</p>
+            <p className="mt-4 text-lg text-center text-[#FFFFFF] ">Create Account</p>
+            <p className="mt-1 text-lg text-[#FFFFFF] ">Fill in Your Information</p>
+          </div>
+
+          {/* Form container */}
+          <div className="relative z-20 bg-white sm:shadow-lg  mt-[220px] pb-4 lg:px-4 lg:rounded-2xl rounded-tl-[40px] rounded-tr-[40px]">
+
+            <div className="lg:hidden absolute inset-0 z-20 flex flex-col items-center justify-center text-white p-2 ">
+              <h1 className="text-4xl font-bold">LOGO</h1>
+              <p className="mt-4 text-lg">Create Account</p>
+              <p className="mt-1 text-sm">Fill in Your Information</p>
             </div>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+
+            {/* lg elements  */}
+            <div className="mb-8 hidden lg:block">
+              <h3 className="text-[#4285F3] text-[40px] font-normal">LOGO</h3>
+              <h4 className="text-[#152A16] text-[30px] font-semibold py-3">Sign In To Your Account</h4>
+              <p className="text-[#5C635A]">
+                Welcome Back! By clicking the sign-up button, you're agreeing to Zenitood Terms and Service and acknowledging the
+                <span className="text-[#156BCA] font-semibold underline ml-1 whitespace-nowrap">Privacy and Policy</span>
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit(onSubmit)} className="px-2">
+              <h3 className="text-[#1A2531] text-[28px] font-bold font-poppins text-center pt-8">
+                Sign In
+              </h3>
+
               <div>
                 <label className="text-[#152A16] text-[15px] mb-2 block font-medium">Name</label>
                 <div className="relative flex items-center">
@@ -72,7 +97,7 @@ export default function Register() {
                 </div>
               </div>
 
-              {/* email field */}
+              {/* Email field */}
               <div className="mt-4">
                 <label className="text-[#152A16] text-[15px] mb-2 block font-medium">Email</label>
                 <div className="relative flex items-center">
@@ -88,7 +113,7 @@ export default function Register() {
                 </div>
               </div>
 
-              {/* password field */}
+              {/* Password field */}
               <div className="mt-4">
                 <label className="text-gray-800 text-[15px] mb-2 block font-medium">Password</label>
                 <div className="relative flex items-center">
@@ -114,7 +139,7 @@ export default function Register() {
                 </div>
               </div>
 
-              {/* confirm password field */}
+              {/* Confirm password field */}
               <div className="mt-4">
                 <label className="text-gray-800 text-[15px] mb-2 block font-medium">Confirm Password</label>
                 <div className="relative flex items-center">
@@ -164,18 +189,29 @@ export default function Register() {
                 </div>
               </div>
               <div className="mt-8">
-                <button type="submit" className="w-[271px] mx-auto flex items-center justify-center py-3 px-6 text-sm tracking-wide rounded-md text-white bg-[#156BCA] hover:bg-blue-700 focus:outline-none">
+                <button type="submit" className="w-full lg:w-[271px] mx-auto flex items-center justify-center py-3 px-6 text-sm tracking-wide rounded-md text-white bg-[#156BCA] hover:bg-blue-700 focus:outline-none">
                   Sign in
                 </button>
               </div>
             </form>
             <div className="mt-1">
-              <p className="text-md mt-4 text-center text-gray-800">Don't have an account? <Link to={'/login'}>
-                <span className="text-[#156BCA] font-semibold underline ml-1 whitespace-nowrap">Login here</span>
-              </Link></p>
+              <p className="text-md mt-4 text-center text-gray-800">Don't have an account?
+                <Link to={'/login'}>
+                  <span className="text-[#156BCA] font-semibold underline ml-1 whitespace-nowrap">Login here</span>
+                </Link></p>
             </div>
           </div>
         </div>
+
+        {/* Image section */}
+        <div className="lg:w-1/2 mx-auto lg:h-[802px] hidden lg:block bg-[#000842] md:rounded-tr-xl md:rounded-br-xl">
+          <img
+            src="https://readymadeui.com/signin-image.webp"
+            className="lg:w-[70%] w-full h-full object-contain block mx-auto"
+            alt="login-image"
+          />
+        </div>
+
       </div>
     </div>
   );

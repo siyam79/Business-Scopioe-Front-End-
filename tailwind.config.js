@@ -6,7 +6,11 @@ export default {
     './node_modules/swiper/swiper-bundle.min.css'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

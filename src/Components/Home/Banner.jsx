@@ -1,31 +1,35 @@
 import React from 'react'
+import SearchhBar from './SearchBar'
+import { BannerImage, BannerImageBG } from './BannerImage'
 
 export default function Banner() {
   return (
     <section className=''>
-      <div className=' h-[212px] bg-[#FFFFFF] rounded-lg lg:px-7 flex  justify-between '>
-        <div className=' lg:max-w-[587px] w-full '>
-          <div className=' py-4 '>
-            <h1 className=' text-[#152A16] py-4 font-semibold text-[20px] line-height-[30px] leading-8 '> I am Looking For Massage Therapist Near.. </h1>
-            <p className=' text-[15px] leading-6 font-medium'>
-              In using this site, I agree to be bound by the  <span className=' underline text-[#156BCA] '> Terms of Service</span> <br /> and   <span className='underline text-[#156BCA] '>Privacy Policy</span> </p>
+      <div className='lg:h-[212px] h-[428px] bg-[#FFFFFF] rounded-lg lg:px-7 lg:flex justify-between'>
+        <div className='2xl:w-1/2 lg:w-1/2 w-full px-2 lg:px-0'>
+          <div className='lg:py-4'>
+            <h1 className='text-[#152A16] py-4 text-[18px] truncate  font-medium lg:text-[20px] lg:leading-8'>I am Looking For Massage Therapist Near..</h1>
+            <p className='text-[15px] leading-6 font-normal mb-6 lg:mb-0'>
+              In using this site, I agree to be bound by the <span className='underline text-[#156BCA]'>Terms of Service</span> <br className=' lg:block hidden '/> and <span className='underline text-[#156BCA]'>Privacy Policy</span>
+            </p>
           </div>
 
-          <div class="relative ">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-              </svg>
-            </div>
-            <input type="search" id="search" class="block w-full py-3 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-[#E7E7E7] focus:ring-blue-500 focus:border-blue-500 " placeholder=" ZIP Code or City Name" />
-
-            <button type="submit" class="text-white absolute end-2 bottom-1  bg-[#156BCA] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 ">Go</button>
+          <div className='lg:block hidden'>
+            <SearchhBar />
           </div>
         </div>
-        <div>
-          Right
-        </div>
+        <div className='relative 2xl-w-1/2 lg:w-1/2 2xl:ml-60 lg:ml-24 w-full'>
+          <div className='relative'>
+            <BannerImageBG />
+          </div>
+          <div className='absolute lg:top-16 lg:right-0 bottom-14 2xl:left-36  lg:left-36 left-16 transform lg:-translate-y-1/2'>
+            <BannerImage />
+          </div>
 
+          <div className='lg:hidden'>
+            <SearchhBar />
+          </div>
+        </div>
       </div>
     </section>
   )

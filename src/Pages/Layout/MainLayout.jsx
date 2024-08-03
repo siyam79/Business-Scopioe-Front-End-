@@ -19,7 +19,7 @@ export default function MainLayout() {
 
   return (
 
-    <div className="lg:max-w-7xl 2xl:max-[1440px] lg:w-[1440px] mx-auto px-1 ">
+    <div className="lg:max-w-7xl 2xl:max-[1440px] lg:w-[1440px] mx-auto px-1 font-poppins ">
 
       <div className='flex '>
         <div className=' 2xl:w-[250px] lg:w-[220px] '>

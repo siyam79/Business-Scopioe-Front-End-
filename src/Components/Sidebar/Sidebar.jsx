@@ -30,20 +30,20 @@ export default function Sidebar({ isOpen, toggleSidebar, closeSidebar }) {
             <div className='text-center py-10 text-[40px] lg:block hidden text-[#4285F3]'>
                 <h1>LOGO</h1>
             </div>
-            <div className='lg:hidden bg-[#156BCA] h-[302px] w-full '>
+            <div className='lg:hidden bg-[#156BCA] h-[302px] w-full relative mb-2'>
 
                 {/* cross icon  */}
                 <div className="lg:hidden flex justify-start p-2">
                     <IoClose size={24} className="text-xl cursor-pointer text-white " onClick={closeSidebar} />
                 </div>
-                <div className='pt-[116px] pl-20'>
-                    <div className='px-6'>
+                <div className=' text-right absolute right-4 bottom-8'>
+                    <div className=' ml-20 '>
                         {
-                            user?.photoURL ? <img className='w-[74px] h-[74px] rounded-full' src={user?.photoURL} alt="" /> : <img src="https://i.ibb.co/JkNR5W3/user5.png" alt="user" className='w-[74px] h-[74px] rounded-full' />
+                            user?.photoURL ? <img className=' w-20 h-20 text-right rounded-full' src={user?.photoURL} alt="" /> : <img src="https://i.ibb.co/JkNR5W3/user5.png" alt="user" className=' w-20 h-20 text-right rounded-full' />
                         }
                     </div>
-                    <h3 className='text-[#FFFFFF] text-[24px] font-semibold'>{user?.displayName ? user?.displayName : "John"}</h3>
-                    <p className='text-[#1A2634] text-[12px] font-normal'>{user?.email ? user?.email : "user@gmail.com"}</p>
+                    <h3 className='text-[#FFFFFF] text-[24px] font-semibold'>{user?.displayName ? user?.displayName : "sagar soni"}</h3>
+                    <p className='text-[#1A2634]  text-[12px] font-normal'>{user?.email ? user?.email : "user@gmail.com fddds"}</p>
                 </div>
             </div>
             <nav>

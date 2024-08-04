@@ -4,6 +4,7 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { CgLogOut } from "react-icons/cg";
 import useAuth from '../../Hooks/useAuth';
+import { Link } from 'react-router-dom';
 
 export default function Header({ toggleSidebar }) {
   const { user, logOut } = useAuth();
@@ -38,12 +39,26 @@ export default function Header({ toggleSidebar }) {
             <div className='border border-[#E7E7E7] p-2 rounded-full cursor-pointer'>
               <IoNotificationsOutline size={24} />
             </div>
-            <div onClick={logOut} className='flex items-center gap-4 cursor-pointer'>
-              <p className='text-[#F15E4A] text-[15px] font-medium'>Log Out</p>
-              <div className='bg-[#FFECEA] p-2 rounded-full transform rotate-180'>
-                <CgLogOut size={24} />
-              </div>
-            </div>
+            {
+              user?.email && user ? (
+                <div onClick={logOut} className='flex items-center gap-4 cursor-pointer'>
+                  <p className='text-[#F15E4A] text-[15px] font-medium'>Log Out</p>
+                  <div className='bg-[#FFECEA] p-2 rounded-full transform rotate-180'>
+                    <CgLogOut size={24} />
+                  </div>
+                </div>
+              ) : (
+                <Link to={"/login"}>
+                  <div className='flex items-center gap-4 cursor-pointer'>
+                    <p className='text-[#F15E4A] text-[15px] font-medium'>Login</p>
+                    <div className='bg-[#FFECEA] p-2 rounded-full transform rotate-180'>
+                      <CgLogOut size={24} />
+                    </div>
+                  </div>
+                </Link>
+              )
+            }
+
           </div>
         </div>
         <div className='lg:hidden flex items-center gap-4 justify-center my-4' onClick={toggleSidebar}>

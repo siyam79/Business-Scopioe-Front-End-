@@ -13,14 +13,19 @@
     @apply font-poppins font-medium;
 }
 
-.slick-slide > div {
-    margin: 0 10px;
-  }
-  
-  .slick-dots li.slick-active button:before {
-    color:orange !important;
-  }
 
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #000;
+}
+
+@media (max-width: 640px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
 
   
 .swiper {

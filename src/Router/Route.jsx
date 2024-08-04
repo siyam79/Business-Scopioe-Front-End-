@@ -20,7 +20,7 @@ const Route = createBrowserRouter([
         children : [
             {
                 path : "/",
-                element : <PrivateRoute > <Home /> </PrivateRoute>
+                element :  <Home /> 
             },
             {
                 path : "/about",

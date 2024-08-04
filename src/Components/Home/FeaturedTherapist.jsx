@@ -61,15 +61,18 @@ export default function FeaturedTherapist() {
 
     return (
         <section className='pt-8 pb-10'>
-            <h3 className='text-[18px] font-medium pb-2'>Featured Therapist</h3>
+            <h3 className='text-[18px] font-medium pb-2 px-2'>Featured Therapist</h3>
             <div className='relative bg-[#FFFFFF] rounded-lg px-2 lg:px-7 h-[363px]'>
                 <Swiper
-                    navigation={true}
+                    navigation={{
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }}
                     modules={[Navigation]}
                     breakpoints={{
                         0: {
-                            slidesPerView: 2,
-                            spaceBetween: 10,
+                            slidesPerView: 1,
+                            spaceBetween: -30,
                         },
                         1024: {
                             slidesPerView: 4,
@@ -80,14 +83,18 @@ export default function FeaturedTherapist() {
                 >
                     {userInformation.map((user, index) => (
                         <SwiperSlide key={index}>
-                            <div className='lg:h-[303px] w-full h-full lg:w-[190px] border-gray-800 my-6 mx-12 shadow-md overflow-hidden rounded-bl-xl rounded-br-xl rounded-md'>
-                                <div className='lg:max-w-[190px] w-full p-2'>
+                            <div className='lg:h-[303px] w-full h-full lg:w-[190px] border-gray-800 my-6 lg:mx-12 shadow-md overflow-hidden rounded-bl-xl rounded-br-xl mx-8   rounded-md '>
+                                <div className='lg:max-w-[190px] w-full h-[170px] p-2'>
                                     <img className='w-full h-[100px] object-cover rounded-lg' src={user.image} alt={user.name} />
                                 </div>
                                 <div className='text-left ml-2 text-[12px]'>
                                     <h3 className="font-medium text-sm">{user?.name}</h3>
-                                    <p className="flex items-center gap-2"><IoLocation /> {user?.location}</p>
-                                    <p className="flex items-center gap-2"><FaCar /> {user?.productionTypes}</p>
+                                    <p className="flex items-center gap-2">
+                                        <IoLocation className="hidden sm:inline-block" /> {user?.location}
+                                    </p>
+                                    <p className="flex items-center gap-2">
+                                        <FaCar className="hidden sm:inline-block" /> {user?.productionTypes}
+                                    </p>
                                 </div>
                                 <div className='mt-7 bg-[#156BCA] rounded-bl-xl rounded-br-xl'>
                                     <button className="text-[#ffffff] cursor-pointer text-[14px] font-medium py-4">See Details</button>
@@ -96,6 +103,9 @@ export default function FeaturedTherapist() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                {/* Custom navigation buttons */}
+                <div className="swiper-button-next hidden sm:block"></div>
+                <div className="swiper-button-prev hidden sm:block"></div>
             </div>
         </section>
     );

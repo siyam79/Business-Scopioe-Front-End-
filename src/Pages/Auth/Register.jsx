@@ -184,15 +184,15 @@ export default function Register() {
               <div className="flex flex-wrap items-center justify-between gap-4 mt-4">
                 <div className="flex items-center">
                   <input id="remember-me" name="remember-me" type="checkbox" className="h-4 w-4 shrink-0 text-blue-600 border-gray-300 rounded-md" required />
-                  <label htmlFor="remember-me" className="ml-3 block text-sm">
-                    Remember me
+                  <label htmlFor="remember-me" className="ml-3 block text-sm text-[#156BCA]">
+                  Accept Terms of Service
                   </label>
                 </div>
-                <div>
+                {/* <div>
                   <a href="javascript:void(0);" className="text-[#156BCA] font-semibold text-sm hover:underline">
                     Forgot Password?
                   </a>
-                </div>
+                </div> */}
               </div>
               <div className="mt-8">
                 <button type="submit" className="w-full lg:w-[271px] mx-auto flex items-center justify-center py-3 px-6 text-sm tracking-wide rounded-md text-white bg-[#156BCA] hover:bg-blue-700 focus:outline-none">

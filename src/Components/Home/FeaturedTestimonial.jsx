@@ -64,8 +64,8 @@ export default function FeaturedTestimonial() {
     return (
         <section className='lg:w-1/2 2xl:w-1/2 2xl:h-[429px] lg:h-[380px] mb-6'>
             <h2 className='text-lg lg:text-xl 2xl:text-2xl font-semibold pb-2 lg:px-0 px-2 '>Featured Testimonial</h2>
-            <div className='bg-[#FFFFFF] rounded-lg shadow-md 2xl:px-7 lg:px-4 px-2'>
-                <div className="lg:w-full w-full 2xl:h-[400px] lg:h-[390px] h-[370px] lg:pt-4 flex items-center justify-center relative">
+            <div className='bg-[#FFFFFF] rounded-lg shadow-md 2xl:px-7 lg:px-4 px-1'>
+                <div className="lg:w-full w-full 2xl:h-[400px] lg:h-[390px] h-[380px] lg:pt-4 flex items-center justify-center relative">
                     <Swiper
                         slidesPerView={1}
                         grid={{ rows: 2 }}
@@ -80,18 +80,18 @@ export default function FeaturedTestimonial() {
                                     <img
                                         src={client.image}
                                         alt={`Slide ${index + 1}`}
-                                        className="object-cover rounded-lg lg:max-w-[130px] max-w-[120px] 
-                                        h-[130px] lg:px-2 px-1"
+                                        className="object-cover rounded-lg lg:max-w-[130px] max-w-[100px] 
+                                        max-h-[130px] lg:px-2 px-1"
 
                                     />
-                                    <div className='py-2 text-left lg:px-2 px-1  '>
-                                        <p className='flex items-center gap-1 font-normal text-[14px] sm:text-sm text-[#5C635A]'>
+                                    <div className='lg:py-2 text-left lg:px-2 px-1  '>
+                                        <p className='flex items-center lg:gap-1 gap-0.5 font-normal lg:text-[14px] text-sm text-[#5C635A] truncate '>
                                             <IoLocation size={18}/> {client.location}
                                         </p>
                                         <h1 className="font-bold text-[16px]  lg:text-xl py-1">
                                             {client.title} <span className='text-[#156BCA] italic'>by Cort</span>
                                         </h1>
-                                        <p className="text-[12px] sm:text-sm text-[#5C635A]">
+                                        <p className="lg:text-[14px] font-normal text-[12px] text-[#5C635A]">
                                             {client.description} <span className='text-[#156BCA] font-normal text-xs'>...Read More</span>
                                         </p>
                                     </div>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Products() {
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Products() {
         const data = await response.json();
         setProducts(data);
       } catch (error) {
-        setError(error.message);
+        console.log((error.message));
       } finally {
         setLoading(false);
       }

@@ -8,7 +8,7 @@ import { SiFacebook } from "react-icons/si";
 
 export default function SocialLogin() {
 
-    const { googleLogin } = useAuth()
+    const { googleLogin , facebookLogin } = useAuth()
     const navigate = useNavigate()
 
     const handleSocialLogin = (user) => {
@@ -26,11 +26,11 @@ export default function SocialLogin() {
     }
     return (
         <>
-            <button onClick={() => handleSocialLogin(googleLogin)} type="button" className="w-full  flex items-center justify-center 2xl:gap-2 lg:gap-2 gap-1 py-3 2xl:px-6 lg:px-2 text-[16px]  font-normal tracking-wide text-gray-800 border border-gray-300 rounded-md bg-[#E4E4E4]  ">
+            <button onClick={() => handleSocialLogin(googleLogin)} type="submit" className="w-full  flex items-center justify-center 2xl:gap-2 lg:gap-2 gap-1 py-3 2xl:px-6 lg:px-2 text-[16px]  font-normal tracking-wide text-gray-800 border border-gray-300 rounded-md bg-[#E4E4E4]  ">
                 <FcGoogle size={20} />
                 google
             </button>
-            <button type="button" className="w-full flex items-center justify-center 2xl:gap-2 lg:gap-2 py-3 gap-1 2xl:px-6 lg:px-2 text-[16px]  font-normal tracking-wide text-[#ffffff] border border-gray-300 rounded-md bg-[#298FFF] ">
+            <button onClick={() => handleSocialLogin(facebookLogin)} type="submit" className="w-full flex items-center justify-center 2xl:gap-2 lg:gap-2 py-3 gap-1 2xl:px-6 lg:px-2 text-[16px]  font-normal tracking-wide text-[#ffffff] border border-gray-300 rounded-md bg-[#298FFF] ">
                 <SiFacebook size={20} />
                 facebook
             </button>

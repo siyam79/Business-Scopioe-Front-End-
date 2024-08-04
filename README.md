@@ -1,6 +1,6 @@
 # Project Title
 
-Web Application based on Figma Design
+Business-Scopioe
 
 ## Introduction
 
@@ -71,6 +71,12 @@ For Firebase, create a Firebase project and update the configuration in `src/fir
   - User session management.
   - Protected routes for authenticated users.
 
+
+- **Login Features:**
+  - Email Password authentication.
+  - Google authentication.
+  - Facebook authentication.
+
 - **React Router Setup:**
   - Client-side routing with react-router-dom.
   - Routes for login, main content, and other pages as per the design.
@@ -86,7 +92,7 @@ For Firebase, create a Firebase project and update the configuration in `src/fir
 
 - React.js
 - react-router-dom
-- Firebase or Auth0
+- Firebase Auth
 - Tailwind CSS
 - React-hook-form
 - react-hot-toast

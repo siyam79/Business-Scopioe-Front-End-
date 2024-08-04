@@ -1,5 +1,5 @@
 
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GoogleAuthProvider, FacebookAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState, } from "react";
 
 import { auth } from "../Config/firebase.config";
@@ -15,7 +15,13 @@ const Authprovider = ({ children }) => {
 
 
     const googleProvider = new GoogleAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
 
+    // Facebook login
+    const facebookLogin = () => {
+        setLoading(true);
+        return signInWithPopup(auth, facebookProvider);
+    };
 
     // google login  
     const googleLogin = () => {
@@ -60,7 +66,6 @@ const Authprovider = ({ children }) => {
             setUser(currentUser);
             console.log("current user", currentUser);
             setLoading(false);
-            // if user exists then issue a token
 
         });
         return () => {
@@ -70,10 +75,10 @@ const Authprovider = ({ children }) => {
 
 
 
-
     const authInformatiopn = {
         googleLogin,
         createUser,
+        facebookLogin,
         user,
         signin,
         logOut,

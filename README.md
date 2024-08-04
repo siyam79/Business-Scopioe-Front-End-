@@ -131,7 +131,7 @@ Ensure you have configured Firebase  in the `.env` file with the correct credent
 
 ## Contributors
 
-- [Your Name](https://github.com/siyam79)
+- [Siyam Ahmed](https://github.com/siyam79)
 
 ## License
 
